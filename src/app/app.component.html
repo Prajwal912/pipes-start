@@ -10,7 +10,14 @@
             class="badge">
             {{ server.status }}
           </span>
-          <strong>{{ server.name }}</strong> | {{ server.instanceType }} | {{ server.started }}
+          <!-- chainig pipes use more than one pipes -->
+          <strong>{{ server.name | uppercase | slice:0:5}}...</strong> |
+          <!-- custom pipe -->
+           {{ server.instanceType | shorten }} |
+              <!-- //parameterized pipe use built in parameter with it-->
+           {{ server.started | date:'fullDate'}}
+
+
         </li>
       </ul>
     </div>
