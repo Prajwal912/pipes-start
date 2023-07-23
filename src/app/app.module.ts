@@ -6,12 +6,14 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { ShortenPipe } from './shorten.pipe';
 import { FirstLetterPipe } from './first-letter.pipe';
+import { FilterPipe } from './filter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     ShortenPipe,
-    FirstLetterPipe
+    FirstLetterPipe,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
