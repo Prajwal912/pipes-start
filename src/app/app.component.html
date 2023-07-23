@@ -11,9 +11,9 @@
             {{ server.status }}
           </span>
           <!-- chainig pipes use more than one pipes -->
-          <strong>{{ server.name | uppercase | slice:0:5}}...</strong> |
+          <strong>{{ server.name | uppercase | shorten}}</strong> |
           <!-- custom pipe -->
-           {{ server.instanceType | shorten }} |
+           {{ server.instanceType | firstLetter }} |
               <!-- //parameterized pipe use built in parameter with it-->
            {{ server.started | date:'fullDate'}}
 
