@@ -11,7 +11,7 @@
             {{ server.status }}
           </span>
           <!-- chainig pipes use more than one pipes -->
-          <strong>{{ server.name | uppercase | shorten:'10'}}</strong> |
+          <strong>{{ server.name | uppercase | shorten:20}}</strong> |
           <!-- custom pipe -->
            {{ server.instanceType | firstLetter }} |
               <!-- //parameterized pipe use built in parameter with it-->
