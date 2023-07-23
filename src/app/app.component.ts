@@ -6,6 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+appStatus = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve('stable')
+  }, 1000);
+})
+
   servers = [
     {
       instanceType: 'medium',
@@ -43,12 +49,4 @@ export class AppComponent {
     };
   }
 
-  // addServer(){
-  //   this.servers.push({
-  //     instanceType: 'small',
-  //     name: 'Testing Environment Server',
-  //     status: 'stable',
-  //     started: new Date(15, 1, 2017)
-  //   })
-  // }
 }
